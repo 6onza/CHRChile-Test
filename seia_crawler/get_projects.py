@@ -103,8 +103,8 @@ def save_projects_to_json():
     # it won't save the projects till the end
 
     total_pages, cookie = get_total_pages_and_cookie() 
-    # if you want to get a specific number of pages
-    total_pages = 3
+    # if you want to get a specific number of pages specify below:
+    # total_pages = 3
 
     # list to store the projects
     projects: list = []
