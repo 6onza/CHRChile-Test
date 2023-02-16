@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %} ESTACIONES DE BICIS {% endblock %}
+
+{% block content %}
+    {% load bootstrap4 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='full' %}
+    <div class="container-fluid p-4">
+        <h1 class="text-center m-5">BIKE STATIONS</h1>
+        
+        <table class="table table-striped text-center">
+          <thead>
+            <tr>
+              <th>Company</th>
+                <th>Address</th>
+                <th>Name</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Free Bikes</th>
+                <th>Empty Slots</th>
+                <th>Timestamp</th>
+                <th>Altitude</th>
+                <th>EBikes</th>
+                <th>Has EBikes</th>
+                <th>Last Updated</th>
+                <th>Payment</th>
+                <th>Payment Terminal</th>
+                <th>Slots</th>
+            </tr>
+            </thead>
+            <tbody>
+              {% if stations %}
+                {% for station in stations %}
+                <tr>
+                  <td>{{ station.company }}</td>
+                  <td>{{ station.address }}</td>
+                  <td>{{ station.name }}</td>
+                  <td>{{ station.latitude }}</td>
+                  <td>{{ station.longitude }}</td>
+                  <td>{{ station.free_bikes }}</td>
+                  <td>{{ station.empty_slots }}</td>
+                  <td>{{ station.timestamp }}</td>
+                  <td>{{ station.altitude }}</td>
+                  <td>{{ station.ebikes }}</td>
+                  <td>{{ station.has_ebikes }}</td>
+                  <td>{{ station.last_updated }}</td>
+                  <td>{{ station.payment }}</td>
+                  <td>{{ station.payment_terminal }}</td>
+                  <td>{{ station.slots }}</td>
+                </tr>
+                {% endfor %}
+              {% else %}
+                <tr>
+                  <td colspan="15">No stations found</td>
+                </tr>
+              {% endif %}
+                
+          </tbody>
+        </table>
+      </div>
+    
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %} SEIA Projects {% endblock %}
+
+{% block content %}
+    {% load bootstrap4 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='full' %}
+    <div class="container-fluid p-4">
+        <h1 class="text-center m-5">SEIA Projects</h1>
+        <table class="table table-striped text-center">
+          <thead>
+            <tr>
+                <th>Number</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Region</th>
+                <th>Typology</th>
+                <th>Owner</th>
+                <th>Investment</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Map</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% if projects %}
+                    {% for project in projects %}
+                    <tr>
+                        <td>{{ project.number }}</td>
+                        <td>{{ project.name }}</td>
+                        <td>{{ project.type }}</td>
+                        <td>{{ project.region }}</td>
+                        <td>{{ project.typology }}</td>
+                        <td>{{ project.owner }}</td>
+                        <td>{{ project.investment }}</td>
+                        <td>{{ project.date }}</td>
+                        <td>{{ project.status }}</td>
+                        <td> 
+                            {% if project.map %}
+                                <a href="{{ project.map }}" target="_blank">Map</a>
+                            {% else %}
+                                -
+                            {% endif %}
+
+
+                        </td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="10">No projects found</td>
+                    </tr>
+                {% endif %}
+
+{% endblock %}
