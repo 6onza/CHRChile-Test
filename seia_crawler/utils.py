@@ -1,1 +1,0 @@
-SEIA_URL: str = 'https://seia.sea.gob.cl/busqueda/buscarProyectoAction.php'
