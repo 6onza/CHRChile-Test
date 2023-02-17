@@ -1,35 +1,5 @@
 from django.db import models
 
-# data returned from api endpoint:
-# {
-    #     "empty_slots": 5,
-    #     "extra": {
-    #       "address": "Alcalde Dávalos 124",
-    #       "altitude": 0,
-    #       "ebikes": 0,
-    #       "has_ebikes": true,
-    #       "last_updated": 1676478183,
-    #       "normal_bikes": 2,
-    #       "payment": [
-    #         "key",
-    #         "transitcard",
-    #         "creditcard",
-    #         "phone"
-    #       ],
-    #       "payment-terminal": true,
-    #       "post_code": "1111",
-    #       "renting": 1,
-    #       "returning": 1,
-    #       "slots": 7,
-    #       "uid": "237"
-    #     },
-    #     "free_bikes": 2,
-    #     "id": "e1593acef03a0fd770595370586bc358",
-    #     "latitude": -33.428334,
-    #     "longitude": -70.627312,
-    #     "name": "P31 - Estación Canal 13",
-    #     "timestamp": "2023-02-15T16:24:34.841000Z"
-    #   }
 
 
 class Company(models.Model):
