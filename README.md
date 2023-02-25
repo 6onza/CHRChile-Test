@@ -1,4 +1,4 @@
-## Prueba tecnica para CHRChile
+## Prueba tecnica
 
 Este es un proyecto desarrollado en Django 4.0.1 y Python 3.10.10 que cuenta con dos aplicaciones: una para visualizar y almacenar la información de las estaciones de bicicletas en Santiago y otra para obtener y almacenar información de proyectos del Sistema de Evaluación de Impacto Ambiental (SEIA).
 
